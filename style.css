@@ -46,3 +46,12 @@ form button {
   background: white;
   cursor: pointer;
 }
+
+#state-search {
+    width:300px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+}

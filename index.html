@@ -35,6 +35,28 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="container" id="container1">
+            <h1>Where's the next adventure?</h1>
+            <form action="#">
+                <input id="state-search" type="text" name="state-search" placeholder="Enter state name here...">
+                <button id="submit-btn" type="submit">Search</button>
+                <select id="per-page" name="per-page" >
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="container" id="container2">
+            <div class="card">
+                <h3 id="brew1">Sweetwater Brewing Co</h3>
+                <p id="city1">City</p>
+                <p id="phone1">Phone</p>
+            </div>
+        </div>
+
         <script src="config.js"></script>
         <script src="brewery.js"></script>
     </body>
