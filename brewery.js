@@ -22,14 +22,19 @@ document.getElementById("searchButn").addEventListener("click", function (event)
 });
 console.log("IT WORKS!!!")
 
-function addBreweryList(event){
-    event.preventDefault();
-    const breweryDiv = document.createElement("div");
-        console.log(form.breweryDiv)
-    const breweryTitle = form.breweryDiv.value 
 
-    breweryDiv.appendChild("beerList");
+const addBreweryList = document.createElement("div")
+        addBreweryList.innerHTML = "";
+        document.body.appendChild(addBreweryList);
+
+// function addBreweryList(event){
+//     event.preventDefault();
+//     const breweryDiv = document.createElement("div");
+//         console.log(form.breweryDiv)
+//     const breweryTitle = form.breweryDiv.value 
+
+//     breweryDiv.appendChild("beerList");
 
 
-}
+
 
