@@ -11,7 +11,7 @@ const generateCard = (data) => {
         console.log(data[i]);
 
         let div = document.createElement('div')
-        div.classList.add('card')
+        div.classList.add('breweryCard')
         let brewName = document.createElement('h3')
         brewName.setAttribute('id', `brew${i}`)
         brewName.innerHTML = data[i].name
