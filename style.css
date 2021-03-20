@@ -1,4 +1,5 @@
 .breweryCard {
+  border: darkolivegree#492a2d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   margin: auto;
@@ -13,8 +14,8 @@
 }
 
 body {
-  background-color: darkgoldenrod;
-  color: maroon;
+  background-color: #fdfbd1;
+  color: #492a2d;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   min-height: auto;
   margin: 0;
@@ -38,6 +39,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:#fdfbd1;
+
 }
 
 .form {
@@ -47,20 +50,21 @@ h1 {
   align-items: center;
   padding: 0.5rem;
   font-size: medium;
-  border: maroon;
+  border-color: #492a2d;
 }
 
 .form input {
   padding: 0.5rem;
   font-size: medium;
-  border-color: maroon;
+  border-color:   #492a2d;
   margin-right: 1rem;
 }
 
 .form button {
   font-size: medium;
   padding: 0.5rem;
-  color: maroon;
+ color: #492a2d;
+
   background: white;
   cursor: pointer;
   margin-right: 1rem;
@@ -69,6 +73,7 @@ h1 {
 .form select {
   height: 44px;
   padding: 0.5rem;
+  color: #492a2d;
   font-size: medium;
   border-color: maroon;
   background: white;
