@@ -19,6 +19,7 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   min-height: auto;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -27,11 +28,16 @@ body {
 }
 
 #container2 {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox */
+  box-sizing: border-box;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
   margin: 0;
+  background-color: #fdfbd1;
+  padding: 2rem;
 }
 
 h1 {
@@ -80,8 +86,4 @@ h1 {
   border-color: maroon;
   background: #fdfbd1;
   cursor: pointer;
-}
-
-#container2 {
-  background-color: #fdfbd1;
 }
