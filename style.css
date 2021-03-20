@@ -19,6 +19,7 @@ body {
   min-height: auto;
   margin: 0;
 }
+
 .container {
   margin: 0;
   width: 100vw;
@@ -39,7 +40,7 @@ h1 {
   align-items: center;
 }
 
-form {
+.form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
@@ -48,25 +49,32 @@ form {
   font-size: medium;
   border: maroon;
 }
-form input {
+
+.form input {
   padding: 0.5rem;
   font-size: medium;
   border-color: maroon;
+  margin-right: 1rem;
 }
-form button {
+
+.form button {
   font-size: medium;
   padding: 0.5rem;
   color: maroon;
   background: white;
   cursor: pointer;
+  margin-right: 1rem;
 }
-form select {
-  font-size: medium;
+
+.form select {
+  height: 44px;
   padding: 0.5rem;
-  color: maroon;
+  font-size: medium;
+  border-color: maroon;
   background: white;
   cursor: pointer;
 }
+
 #container2 {
   background-color: grey;
 }
