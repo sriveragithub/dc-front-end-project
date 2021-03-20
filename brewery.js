@@ -1,3 +1,4 @@
+
 const WEATHER_KEY = config.WEATHER_API_KEY
 const UN_KEY = config.UNSPLASH_KEY
 
@@ -47,17 +48,21 @@ submit.addEventListener('click', (e) => {
 
 
 
-// const useData = (data) => {
-//     console.log(data)
-// }
+const useData = (data) => {
+    console.log(data)
+    let backImage = data.results[9].urls.full;
+    $("#container1").css("background-image", `url(${backImage})`);
+}
 
-// let query = 'beer'
+let query = 'brewery'
 
-// fetch(`https://api.unsplash.com/search/photos?page=1&query=${query}`, {
-//     headers: {
-//     'Accept-Version': 'v1',
-//     'Authorization': `Client-ID ${UN_KEY}`
-//     }
-// })
-//     .then(res => res.json())
-//     .then(data => useData(data))
+fetch(`https://api.unsplash.com/search/photos?page=1&query=${query}`, {
+    headers: {
+    'Accept-Version': 'v1',
+    'Authorization': `Client-ID ${UN_KEY}`
+    }
+})
+    .then(res => res.json())
+    .then(data => useData(data))
+ 
+    
