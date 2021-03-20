@@ -24,7 +24,7 @@ const generateCard = (data) => {
         div.append(brewName)
         div.append(cityName)
         div.append(phoneNum)
-        document.getElementById('container1').append(div)
+        document.getElementById('container2').append(div)
     }
 }
 
