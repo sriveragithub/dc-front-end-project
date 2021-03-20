@@ -1,10 +1,12 @@
 .breweryCard {
   border: darkolivegree#492a2d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 100%;
   margin: auto;
   text-align: center;
   font-family: arial;
+  min-height: 30vh;
+  padding-top: 1rem;
 }
 
 .breweryCard:hover {
@@ -16,7 +18,20 @@ body {
   color: #492a2d;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   min-height: auto;
-  margin:0;
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+  width: 100vw;
+}
+
+#container2 {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 0;
 }
 
 h1 {
@@ -28,7 +43,7 @@ h1 {
 
 }
 
-form {
+.form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
@@ -37,25 +52,34 @@ form {
   font-size: medium;
   border-color: #492a2d;
 }
-form input {
+
+.form input {
   padding: 0.5rem;
   font-size: medium;
   border-color:   #492a2d;
-
+  margin-right: 1rem;
 }
-form button {
+
+.form button {
   font-size: medium;
   padding: 0.5rem;
  color: #492a2d;
 
   background: white;
   cursor: pointer;
+  margin-right: 1rem;
 }
-form select {
-  font-size: medium;
-  padding: 0.5rem;
- color: #492a2d;
 
+.form select {
+  height: 44px;
+  padding: 0.5rem;
+  color: #492a2d;
+  font-size: medium;
+  border-color: maroon;
   background: white;
   cursor: pointer;
+}
+
+#container2 {
+  background-color: grey;
 }
