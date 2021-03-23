@@ -55,8 +55,9 @@ submit.addEventListener('click', (e) => {
         botContainer.removeChild(botContainer.firstChild)
     };
 
-    let input = document.getElementById('state-search').value
-    fetch(`https://api.openbrewerydb.org/breweries?by_state=${input}&per_page=${perPage.value}`)
+    let stateInput = document.getElementById('state-search').value
+    let cityInput = document.getElementById('city-search').value
+    fetch(`https://api.openbrewerydb.org/breweries?by_state=${stateInput}&per_page=${perPage.value}`)
         .then(res => res.json())
         .then(data => generateCard(data))
   
@@ -78,3 +79,10 @@ fetch(`https://api.unsplash.com/search/photos?page=1&query=${query}`, {
 })
     .then(res => res.json())
     .then(data => useData(data))
+
+
+
+
+fetch(`https://api.openbrewerydb.org/breweries?by_state=georgia&by_city=atlanta&per_page=20`)
+    .then(res => res.json())
+    .then(data => console.log(data))
