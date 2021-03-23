@@ -57,9 +57,21 @@ submit.addEventListener('click', (e) => {
 
     let stateInput = document.getElementById('state-search').value
     let cityInput = document.getElementById('city-search').value
-    fetch(`https://api.openbrewerydb.org/breweries?by_state=${stateInput}&per_page=${perPage.value}`)
+
+    if (cityInput == '' && stateInput != '') {
+        fetch(`https://api.openbrewerydb.org/breweries?by_state=${stateInput}&per_page=${perPage.value}`)
         .then(res => res.json())
         .then(data => generateCard(data))
+    } else if (cityInput != '' && stateInput == '') {
+        fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput}&per_page=${perPage.value}`)
+        .then(res => res.json())
+        .then(data => generateCard(data))
+    } else if (cityInput != '' && stateInput != '') {
+        fetch(`https://api.openbrewerydb.org/breweries?by_state=${stateInput}&by_city=${cityInput}&per_page=${perPage.value}`)
+        .then(res => res.json())
+        .then(data => generateCard(data))
+    }
+    
   
 })
 
@@ -79,10 +91,3 @@ fetch(`https://api.unsplash.com/search/photos?page=1&query=${query}`, {
 })
     .then(res => res.json())
     .then(data => useData(data))
-
-
-
-
-fetch(`https://api.openbrewerydb.org/breweries?by_state=georgia&by_city=atlanta&per_page=20`)
-    .then(res => res.json())
-    .then(data => console.log(data))
