@@ -61,6 +61,9 @@ const generateCard = (data) => {
 submit.addEventListener('click', (e) => {
     e.preventDefault
 
+    var audio = new Audio('./sounds/beerdrink.mp3');
+    audio.play();
+  
     let searchText = document.getElementById('search-text')
     searchText.style.display = 'none'
 

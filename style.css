@@ -45,6 +45,7 @@ h1 {
   padding: 0.5rem;
   color: #492a2d;
   background: #fdfbd1;
+  border-color: #492a2d;
   cursor: pointer;
   margin-right: 1rem;
 }
@@ -54,7 +55,7 @@ h1 {
   padding: 0.5rem;
   color: #492a2d;
   font-size: medium;
-  border-color: maroon;
+  border-color: #492a2d;
   background: #fdfbd1;
   cursor: pointer;
 }
@@ -89,4 +90,19 @@ h1 {
 
 .breweryCard:hover {
   opacity: 0.7;
+}
+
+footer{
+  position: fixed;
+  left: auto;
+  bottom: 0px;
+  right: auto;
+  background-color: #492a2d;
+  color: #fdfbd1;
+  height: 30px;
+  font-size: 2vh;
+  text-align: center;
+  text-size-adjust: auto;
+  width: 100%;
+  margin-top: auto;
 }
