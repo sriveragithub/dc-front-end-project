@@ -51,6 +51,9 @@ const generateCard = (data) => {
 submit.addEventListener('click', (e) => {
     e.preventDefault
 
+    var audio = new Audio('./sounds/beerdrink.mp3');
+    audio.play();
+
     while (botContainer.firstChild) {
         botContainer.removeChild(botContainer.firstChild)
     };
