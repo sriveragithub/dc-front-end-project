@@ -1,3 +1,4 @@
+
 .breweryCard {
   border: darkolivegree#492a2d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -26,12 +27,9 @@ body {
   margin: 0;
   width: 100vw;
   max-width: 1800px;
-
-  /* max-width: 1;
-  max-height: auto; */
 }
 
-#container2 {
+#card-container {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox */
   box-sizing: border-box;
@@ -64,6 +62,7 @@ h2 {
   color: #fdfbd1;
   font-family: "fantasy", fantasy;
   text-shadow: 2px 2px maroon;
+  color:#fdfbd1;
 }
 
 .form {
@@ -90,6 +89,7 @@ h2 {
   padding: 0.5rem;
   color: #492a2d;
   background: #fdfbd1;
+  border-color: #492a2d;
   cursor: pointer;
   margin-right: 1rem;
 }
@@ -99,10 +99,11 @@ h2 {
   padding: 0.5rem;
   color: #492a2d;
   font-size: medium;
-  border-color: maroon;
+  border-color: #492a2d;
   background: #fdfbd1;
   cursor: pointer;
 }
+
 /* Even smaller Smartphones (phones) ----------- */
 @media only screen and (min-device-width: 250px) and (max-device-width: 600px) {
 }
@@ -209,4 +210,50 @@ h2 {
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+
+#card-container {
+  display: grid;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox */
+  box-sizing: border-box;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 0;
+  background-color: #fdfbd1;
+  padding: 2rem;
+}
+
+#search-text {
+  text-align: center;
+}
+
+.breweryCard {
+  border: #492a2d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  min-height: 30vh;
+  padding-top: 1rem;
+}
+
+.breweryCard:hover {
+  opacity: 0.7;
+}
+
+footer{
+  position: fixed;
+  left: auto;
+  bottom: 0px;
+  right: auto;
+  background-color: #492a2d;
+  color: #fdfbd1;
+  height: 30px;
+  font-size: 2vh;
+  text-align: center;
+  text-size-adjust: auto;
+  width: 100%;
+  margin-top: auto;
 }
