@@ -1,18 +1,3 @@
-.breweryCard {
-  border: darkolivegree#492a2d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  min-height: 30vh;
-  padding-top: 1rem;
-}
-
-.breweryCard:hover {
-  opacity: 0.7;
-}
-
 body {
   background-color: #fdfbd1;
   color: #492a2d;
@@ -27,19 +12,6 @@ body {
   width: 100vw;
 }
 
-#container2 {
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox */
-  box-sizing: border-box;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-  margin: 0;
-  background-color: #fdfbd1;
-  padding: 2rem;
-}
-
 h1 {
   margin: 0;
   min-height: 20vh;
@@ -47,7 +19,6 @@ h1 {
   justify-content: center;
   align-items: center;
   color:#fdfbd1;
-
 }
 
 .form {
@@ -86,4 +57,36 @@ h1 {
   border-color: maroon;
   background: #fdfbd1;
   cursor: pointer;
+}
+
+#card-container {
+  display: grid;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox */
+  box-sizing: border-box;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 0;
+  background-color: #fdfbd1;
+  padding: 2rem;
+}
+
+#search-text {
+  text-align: center;
+}
+
+.breweryCard {
+  border: #492a2d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  min-height: 30vh;
+  padding-top: 1rem;
+}
+
+.breweryCard:hover {
+  opacity: 0.7;
 }
