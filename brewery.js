@@ -19,20 +19,26 @@ const generateCard = (data) => {
     for (let i = 0, len = data.length; i < len; i++) {
         console.log(data[i])
 
+        let link = document.createElement('a')
+        link.href = `${data[i].website_url}`
+        link.target = `_blank`
+        link.rel = `noopener noreferrer`
         let div = document.createElement('div')
         div.classList.add('breweryCard')
         let brewName = document.createElement('h3')
-        brewName.setAttribute('id', `brew${i}`)
         brewName.innerHTML = data[i].name
+        let breweryType = document.createElement('p')
+        breweryType.innerHTML = `Type: `
+        let brewType = document.createElement('span')
+        let nameCap = data[i].brewery_type.charAt(0).toUpperCase() + data[i].brewery_type.slice(1)
+        brewType.innerHTML = nameCap
         let streetName = document.createElement('p')
         streetName.innerHTML = data[i].street
         let cityName = document.createElement('p')
-        cityName.setAttribute('id', `city${i}`)
         cityName.innerHTML = data[i].city
         let phoneNum = document.createElement('p')
-        phoneNum.setAttribute('id', `phone${i}`)
         phoneNum.innerHTML = data[i].phone
-        let tempText = document.createElement('span')
+        let tempText = document.createElement('p')
         tempText.innerHTML = 'Feels like '
         let temp = document.createElement('span')
         let citySearch = data[i].city.split(' ').join('+')
@@ -48,12 +54,15 @@ const generateCard = (data) => {
                 temp.innerHTML = `${data.main.feels_like}&#176;`
             })
         div.append(brewName)
+        div.append(breweryType)
+        breweryType.append(brewType)
         div.append(streetName)
         div.append(cityName)
         div.append(phoneNum)
+        tempText.append(temp)
         div.append(tempText)
-        div.append(temp)
-        document.getElementById('card-container').append(div)
+        link.append(div)
+        document.getElementById('card-container').append(link)
     }
 }
 
@@ -64,13 +73,11 @@ submit.addEventListener('click', (e) => {
     var audio = new Audio('./sounds/beerdrink.mp3');
     audio.play();
   
-    let searchText = document.getElementById('search-text')
-    searchText.style.display = 'none'
-
     while (botContainer.firstChild) {
         botContainer.removeChild(botContainer.firstChild)
     }
 
+    let searchText = document.getElementById('search-text')
     let stateInput = document.getElementById('state-search').value
     let cityInput = document.getElementById('city-search').value
 
@@ -78,14 +85,17 @@ submit.addEventListener('click', (e) => {
         fetch(`https://api.openbrewerydb.org/breweries?by_state=${stateInput}&per_page=${perPage.value}`)
         .then(res => res.json())
         .then(data => generateCard(data))
+        searchText.innerHTML = `Viewing breweries in ${stateInput}...`
     } else if (cityInput != '' && stateInput == '') {
         fetch(`https://api.openbrewerydb.org/breweries?by_city=${cityInput}&per_page=${perPage.value}`)
         .then(res => res.json())
         .then(data => generateCard(data))
+        searchText.innerHTML = `Viewing breweries in ${cityInput}...`
     } else if (cityInput != '' && stateInput != '') {
         fetch(`https://api.openbrewerydb.org/breweries?by_state=${stateInput}&by_city=${cityInput}&per_page=${perPage.value}`)
         .then(res => res.json())
         .then(data => generateCard(data))
+        searchText.innerHTML = `Viewing breweries in ${cityInput}, ${stateInput}...`
     }
 })
 
