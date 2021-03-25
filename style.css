@@ -75,6 +75,7 @@ h2 {
   cursor: pointer;
 }
 
+/* Sets the card container to 4 cards across when not in any breakpoints */
 #card-container {
   display: grid;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -105,7 +106,6 @@ h2 {
   margin: auto;
   text-align: left;
   font-family: arial;
-  /* min-height: 30vh; */
   height: 250px;
 }
 
@@ -143,6 +143,8 @@ footer a {
   margin-left: .5rem;
 }
 
+
+/* Responsiveness handling */
 @media screen and (max-width: 1024px) {
   #card-container {
     grid-template-columns: 1fr 1fr 1fr;
