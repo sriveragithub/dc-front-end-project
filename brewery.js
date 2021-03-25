@@ -8,7 +8,6 @@ let botContainer = document.getElementById('card-container')
 
 // function to generate the card information
 const generateCard = (data) => {
-    console.log(data) //testing
 
     if (data.length === 0) {
         let searchText = document.getElementById('search-text')
@@ -17,7 +16,6 @@ const generateCard = (data) => {
     }
 
     for (let i = 0, len = data.length; i < len; i++) {
-        console.log(data[i])
 
         let link = document.createElement('a')
         link.href = `${data[i].website_url}`
@@ -45,7 +43,6 @@ const generateCard = (data) => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${WEATHER_KEY}&units=imperial`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.message === 'city not found') {
                     tempText.innerHTML = 'Temp not available.'
                     temp.innerHTML = ``
@@ -114,7 +111,6 @@ document.getElementById('state-search').addEventListener("keyup", function(event
 });
 
 const useData = (data) => {
-    console.log(data)
     let backImage = data.results[9].urls.full;
     $("#container1").css("background-image", `url(${backImage})`);
 }
